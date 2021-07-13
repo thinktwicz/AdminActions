@@ -46,6 +46,24 @@ $apiUrl = "https://graph.microsoft.com/v1.0/invitations"
 
 # lets make the Json body structure
 # we want to send the email invite so thats true - default is false
+
+<#
+  Some of the options we can put in the body
+{
+  "invitedUserDisplayName": "string",
+  "invitedUserEmailAddress": "string",
+  "invitedUserMessageInfo": {"@odata.type": "microsoft.graph.invitedUserMessageInfo"},
+  "sendInvitationMessage": false,
+  "inviteRedirectUrl": "string",
+  "inviteRedeemUrl": "string",
+  "status": "string",
+  "invitedUser": {"@odata.type": "microsoft.graph.user"},
+  "invitedUserType": "string"
+}
+
+#>
+
+
 $body = 
 @"
 {
